@@ -308,10 +308,12 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 .service-price{
-    position: relative;
+    display: block;
     top: 100px;
     background: linear-gradient(90deg, rgba(33,207,111,1) 26%, rgba(33,207,182,1) 58%, rgba(33,207,182,1) 100%);
     font-size: 20px;
+    max-width: 60%;
+    min-width: 60%;
     font-weight: 600;
     padding: 5px;
     border-radius: 15px;
@@ -320,9 +322,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     box-shadow: #24f481 5px 5px 15px;
 }
 @media (max-width: 600px) {
-    .service-price {
-      font-size: 10px;
-    }
+
   }
 
 @media only screen and (min-width: 375px) and (max-width: 800px) {
@@ -336,6 +336,14 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
         min-width: 100%;
         max-width: 100%;
     }
+    .service-price {
+        font-size: 10px;
+        max-width: 60%;
+        min-width: 60%;
+      }
+      .service-text{
+        font-size: 10px;
+      }
 }
 
 .show-case-list{
