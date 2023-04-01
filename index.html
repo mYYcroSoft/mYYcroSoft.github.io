@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="assets/css.css">
     <link rel="stylesheet" href="assets/el_an.css">
 
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <link rel="stylesheet" href="assets/styles/adver.css">
+    <link rel="stylesheet" href="assets/styles/service.css">
+    <link rel="stylesheet" href="assets/styles/showcase.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -22,14 +27,20 @@
     
 <div id="navbar">
     <a href="#home">Home</a>
-    <a href="#news">Products</a>
+    <a href="#service-list-s">Services</a>
+    <a href="#show-case">Showcase</a>
 
-    <a href="#contact">Services</a>
 
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
       </div>
   </div>
+
+  <div class="images_catalog" id="img_ct" style="display: none">
+
+
+    <button id="rm_button" onclick="remov()">RM</button>
+    </div>
 
   <button onclick="test()">
   <div id="sec_name">HOME 
@@ -69,14 +80,14 @@
     <section id="adver" >
     <div class="adver-container" data-inviewport="scale-in" >
         <div class="colmun-adver">
-            <div class="colmun-title">Order your web now!</div>
-            <div class="colmun-text">Cheap and fast service, for more informations connect to my discord server.</div>
+            <div class="colmun-title">Order your fivem scripts!</div>
+            <div class="colmun-text">Cheap and original custom scripts for your fivem server!.</div>
         </div>
 
         <div class="box-adver" data-inviewport="scale-in" >
-            <div class="box-title">Buy web app templates!</div>
-            <div class="box-text">Buy on my e-shop HTML, CSS web temapltes or PHP, JS web applications. I can edit template for your needs...</div>
-            <div class="box-money">Best sale $30 </div>
+            <div class="box-title">Buy web custom website!</div>
+            <div class="box-text">Order your website, we will create a website according to your requirements.</div>
+            <div class="box-money">Start on $30 </div>
             <div class="box-button_1">E-SHOP</div>
             <div class="box-button_2">Custom</div>
         </div>
@@ -121,57 +132,56 @@
     </div>
 </section>
 
-<iframe width="800" height="800" src="https://myycrosoft-symmetrical-space-umbrella-qj4p4xp9jjqhj76-8000.preview.app.github.dev/gallery/gallery.php"></iframe>
+
 <section id="show-case" >
     
-    <div class="show-case-name" data-inviewport="fade-slide-up">FIVEM SCRIPTS</div>
-    <div class="show-case-bck show-case-list" data-inviewport="fade-slide-up">
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/xbjJohsunyY"></iframe>
-        </div>
 
-        
-        
-    </div>
 
-    <div class="show-case-name" data-inviewport="fade-slide-up">WEB DEVELOPMENT</div>
-    <div class="show-case-bck show-case-list" data-inviewport="fade-slide-up">
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
-        </div>
-        <div class="show-case-box">
-            <iframe class="show-case-frame" width="350" height="250" src="https://www.youtube.com/embed/K22RxPTT0y0"></iframe>
+    <div class="show-case-name" data-inviewport="fade-slide-up">WORK SHOWCASE  </div>
+   
+    <div class="work-box" data-inviewport="scale-in">
+        <div class="show_more for-left"
+         onclick='show_album("arch_01", ["unknown.png", "unknown(1).png"])'>
+            OPEN ALBUM</div>
+        <img class="work_image for-left" src="assets/image.png ">
+        <div class="work-box-text_cont wk_left">
+            <span class="work_box_text_title">KING PORTAL <div class="title-line"></div></span><br><br><br>
+            <span class="work_box_text_text"> 
+                Webová stránka kterou si objednala platforma King Portál. Požadvoala čistý, moderní resposivní design laděný do žlutých bravev. Na úvodní stránce jsou umístěny fotografie produktů, které jsou kvalitně nasvícené a zvýrazňují detaily. Stránka obsahuje také intuitivní navigaci a snadno použitelný košík, což zlepšuje uživatelskou zkušenost. Designový styl se projevuje i v použitých fontech a grafických prvcích, které jsou v souladu s celkovou estetikou stránky.</span>
+
         </div>
 
     </div>
-    
-   <iframe width="800" height="800" src="https://myycrosoft-symmetrical-space-umbrella-qj4p4xp9jjqhj76-8000.preview.app.github.dev/gallery/gallery.php"></iframe>
+
+    <div class="work-box" data-inviewport="fade-slide-up">
+        
+        <img class="work_image for-right" src="assets/image.png "></img>
+        <div class="work-box-text_cont wk_right">
+            <span class="work_box_text_title">FC-LUA <div class="title-line"></div></span><br><br><br>
+            <span class="work_box_text_text"> 
+                Webová stránka kterou si objednala platforma King Portál. Požadvoala čistý, moderní resposivní design laděný do žlutých bravev. Na úvodní stránce jsou umístěny fotografie produktů, které jsou kvalitně nasvícené a zvýrazňují detaily. Stránka obsahuje také intuitivní navigaci a snadno použitelný košík, což zlepšuje uživatelskou zkušenost. Designový styl se projevuje i v použitých fontech a grafických prvcích, které jsou v souladu s celkovou estetikou stránky.</span>
+
+        </div>
+
+    </div>
   
+
+       
+    <div class="work-box" data-inviewport="scale-in">
+        <img class="work_image for-left" src="assets/image.png "></img>
+        <div class="work-box-text_cont wk_left">
+            <span class="work_box_text_title">FIVEM - SHOPS<div class="title-line"></div></span><br><br><br>
+            <span class="work_box_text_text"> 
+                Webová stránka kterou si objednala platforma King Portál. Požadvoala čistý, moderní resposivní design laděný do žlutých bravev. Na úvodní stránce jsou umístěny fotografie produktů, které jsou kvalitně nasvícené a zvýrazňují detaily. Stránka obsahuje také intuitivní navigaci a snadno použitelný košík, což zlepšuje uživatelskou zkušenost. Designový styl se projevuje i v použitých fontech a grafických prvcích, které jsou v souladu s celkovou estetikou stránky.</span>
+
+        </div>
+
+    </div>
 
   
 </section>
 <script src="assets/element_a.js"></script>
+<script src="assets/gallery.js"></script>
 <script>
 // Get the id of the <path> element and the length of <path>
     var triangle = document.getElementById("triangle");

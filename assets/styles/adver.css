@@ -1,0 +1,101 @@
+
+/*Adver*/
+.adver-container{
+    position: relative;
+    top: 150px;
+    
+    min-width: 50%;
+    max-width: 50%;
+    max-height: auto;
+    left: 25%;
+    color: #fff;
+    height: 450px;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .colmun-adver{
+        min-width: 25%;
+        max-width: 30%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(33,207,111,1) 26%, rgba(33,207,182,1) 58%, rgba(33,207,182,1) 100%);
+        border-radius: 15px;
+        border: solid #24f481 2px;
+        box-shadow: #24f481 5px 5px 15px;
+    }
+    
+    .colmun-title{
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 50px;
+        font-weight: 800;
+        text-align: left;
+        padding: 10px;
+    }
+    
+    .colmun-text{
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    
+    /* box */
+    
+    .box-adver{
+        min-width: 65%;
+        max-width: 65%;
+        height: 100%;
+        margin-left: 5%;
+        background: linear-gradient(90deg, rgba(33,207,111,1) 26%, rgba(33,207,182,1) 58%, rgba(33,207,182,1) 100%);
+        border-radius: 15px;
+        border: solid #24f481 2px;
+        box-shadow: #24f481 5px 5px 15px;
+    }
+    
+    .box-title{
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 800;
+        text-align: left;
+        padding: 10px;
+        font-size: 60px;
+        transition: 0.5s;
+    
+    }
+    
+    
+    .box-text{
+        color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+        padding: 20px;
+    }
+    
+    .box-money{
+        position: relative;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        color: #fff;
+        text-align: left;
+        padding: 20px;
+        text-decoration: overline;
+    }
+    
+
+    
+@media (max-width: 890px) {
+.adver-container{
+    
+    min-width: 95%;
+    max-width: 95%;
+    max-height: auto;
+    left: 2.5%;
+}
+  }

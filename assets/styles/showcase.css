@@ -1,0 +1,130 @@
+#show-case{
+    margin: 500px;
+}
+
+.show-case-name{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #262626;
+    font-weight: 700;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.work-box{
+    position: relative;
+    max-width: 150%;
+   
+    min-width: 150%;
+    left: -25%;
+    height: 450px;
+    margin-top: 200px;
+}
+
+.work-box-text_cont{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #262626;
+    min-width: auto;
+    max-width: 50%;
+    padding: 50px;
+ 
+}
+
+.work_box_text_title{
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+
+.work_box_text_text{
+
+    font-size: 18px;
+    font-weight: 400;
+    
+    letter-spacing: 2px;
+  
+}
+
+.title-line{
+    background-color: #08f69b;
+    min-width: 50%;
+    max-width: 50%;
+    height: 30px;
+    margin-top: 
+    -20px;
+}
+
+.work_image{
+    position: absolute;
+    width: 30%;
+    height: 450px;
+}
+
+.for-left{
+    right: 0px;
+  
+}
+
+.for-right{
+    left: 0px;
+}
+.wk_left{
+    text-align: left;
+}
+.wk_right{
+    position: absolute;
+    text-align: left;
+    right: 0px;
+}
+
+.show_more{
+    position: absolute;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #08f69b;
+    padding: 5px;
+    color: #242728;
+    
+    top: 90%;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+
+.images_catalog{
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #2626267b;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    width: 80%;
+    height: 90%;
+    top: 50px;
+    left: 10%;
+    z-index: 5;
+    transition: 0.5s;
+
+  }
+
+  .catalog_img{
+    position: relative;
+    width: 45%;
+    left: 5%;
+    height: 250px;
+    border-radius: 15px;
+
+
+  }
+
+  @media (max-width: 890px) {
+    #show-case{
+        margin: 100px;
+    }
+
+  }

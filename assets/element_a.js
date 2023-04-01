@@ -69,7 +69,8 @@ element_name = document.getElementById("sec_name")
   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
     document.getElementById("navbar").style.width = "20%";
     element_name.style.transform = "rotate(0deg)"
-    document.body.style.backgroundColor = "#262533";
+    document.body.style.backgroundColor = "#fff";
+    document.getElementById("mySVG").style.color = '#08f69b ';
     element_name.style.top = "5px"
     element_name.style.left = "35%"
 
