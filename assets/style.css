@@ -24,6 +24,7 @@ body{
    
 }
 
+
 .home_text_container{
  
     position: absolute;
@@ -146,17 +147,48 @@ line-height: 26pt;
     transition: 0.5;
   }
 
+/* width */
+::-webkit-scrollbar {
+width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
 
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+  }
+  .serivce_container::-webkit-scrollbar{
+    position: absolute;
+   left: 50px;
+   direction:ltr;
+  }
 
 .serivce_container{
     
     position: absolute;
     background-color:#fff;
     display: inline-block;
-    width: 35%;
-    height:  100%;
+    left: 5%;
+    top: 5%;
+    width: 30%;
+    height:  70%;
     max-height: 56rem;
-    padding: 50px;
+    padding: 20px;
+    border-radius: 20px;
     overflow: auto;
     
 }
@@ -188,31 +220,31 @@ line-height: 26pt;
 /*service*/
 
 .service-box{
-    width: 80%;
+    width:  85%;
     border: solid 5px var(--blue_l1);
     background-color: var(--blue_d1);
     
     border-radius: 6px;
     height: 10vh;
-    padding: 15px;
+    padding: 20px;
     transition: 0.5s;
 }
 .service-box:hover{
     transition: 0.5s;
     border: solid #50486b;
-    border-width: 5px 50px 5px 5px;
+    border-width: 5px 30px 5px 5px;
 }
 .serivce-icon{
     position: absolute;
-    font-size: 80px;
+    font-size: 50px;
     color: #ffffff;
-    padding: 5px;
+    padding: 0px;
 }
 
 .service-text-box{
     position: relative;
-    left: 20%;
-    top: 10%;
+    left: 13%;
+    top: 8%;
 
     }
 
@@ -255,10 +287,14 @@ line-height: 26pt;
     position: absolute;
 
     display: inline-block;
-    width: 45%;
-    height:  100%;
+    width: 30%;
+    height:  70%;
+    top: 5%;
+    left: 5%;
+    border-radius: 15px;
     max-height: 56rem;
     padding: 50px;
+    background-color: #fff;
     overflow: auto;
 }
     .project-title{
@@ -269,9 +305,11 @@ line-height: 26pt;
     }
 
 .project_box{
-    width: 50%;
+    width: 80%;
     height: 8rem;
+
     background-color: #fff;
+    color: var(--blue_l1);
     border-radius: 6px;
     border: solid 5px var(--blue_l1);
     padding: 10px;
