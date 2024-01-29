@@ -11,6 +11,7 @@
     color: #ffffff5e;
     font-size: 180%;
     vertical-align:middle;
+    z-index: 5;
 }
 
 .navigation_link{

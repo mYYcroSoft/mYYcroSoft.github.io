@@ -10,16 +10,13 @@
     <meta name="author" content="Josef Šivčo">
     <meta name="keywords" content="HTML, CSS, JavaScript, Python, Lua, Web development, FiveM development, IT student, Portfolio">
     <meta name="description" content="MYYCRO - IT student, Web developer, FiveM developer">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/pageLoad.css">
-    <link rel="stylesheet" href="./css/cursor.css">
-    <link rel="stylesheet" href="./css/zoom.css">
-    <link rel="stylesheet" href="./css/buttons.css">
-    <link rel="stylesheet" href="./css/typewrite.css">
-    <link rel="stylesheet" href="./css/shadow.css">
-    <link rel="stylesheet" href="./css/os.css">
-    <link rel="stylesheet" href="./css/projects.css">
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/pageLoad.css">
+    <link rel="stylesheet" href="../static/css/cursor.css">
+    <link rel="stylesheet" href="../static/css/buttons.css">
+    <link rel="stylesheet" href="../static/css/shadow.css">
+    <link rel="stylesheet" href="../static/css/projects.css">
+    <link rel="stylesheet" href="../static/css/menu.css">
     
 </head>
 <body>
@@ -46,14 +43,14 @@
 <div class="navigationMenuContainer">
 
         <div class="navigation_link_list">
-            <div class="navigation_link navigation_link_selected" >
+            <div class="navigation_link navigation_link_selected" id="open_home"  onclick="openFolderNav()">
                 <i class="fa-solid fa-house navigation_link"></i>
             </div>
     
-            <div class="navigation_link">
+            <div class="navigation_link" id="open_project_list" onclick="openFolderNav()">
                 <i class="fa-solid fa-folder navigation_link"></i>
             </div>
-            <div class="navigation_link">
+            <div class="navigation_link" onclick="openFolderNav()">
                 <i class="fa-solid fa-user navigation_link"></i>
             </div>
     
@@ -198,15 +195,15 @@
        <span id="InfoBoxText"></span>
         </div>
 
-    <div class="infoBoxImages">
+    <div class="infoBoximags">
         
     </div>
     </div>
     
-    <div class="projectListNavBar" id="projectNav">
+  <!--  <div class="projectListNavBar" id="projectNav">
         <i class="fa-solid fa-computer-mouse"></i>
 
-    </div>
+    </div>-->
     <div class="projectContainer" id="projContainer">
      <div class="projectListControls">
         <div onclick="loadProjectsWithTag(this)">All</div>
@@ -222,13 +219,13 @@
 
     <script src="https://kit.fontawesome.com/d798d3878a.js" crossorigin="anonymous"></script>
 
-    <script src="./js/cursor.js"></script>
-<script src="./js/reTypeText.js"></script>
-    <script src="./js/pageMoveEffect.js"></script>
-<script src="./js/navBar.js"></script>
-<script src="./js/langSkills.js"></script> 
-<script src="./js/projectList.js" ></script>  
-<script src="./js/projectLoader.js" ></script> 
+    <script src="../js/cursor.js" type="module"></script>
+<script src="../js/reTypeText.js" type="module"></script>
+    <script src="../js/pageMoveEffect.js" type="module"></script>
+<script src="../js/navBar.js" type="module"></script>
+<script src="../js/langSkills.js" type="module"></script> 
+<script src="../js/projectList.js" type="module"></script>  
+<script src="../js/projectLoader.js" type="module" ></script> 
 </body>
 </html>
 

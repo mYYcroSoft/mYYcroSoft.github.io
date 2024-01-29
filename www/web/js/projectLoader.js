@@ -39,7 +39,7 @@ function openProject(obj){
 }
 
 projContainerOpen = false 
-projNav = document.getElementById('projectNav')
+projNav = document.getElementById('open_project_list')
 projContainer = document.getElementById('projContainer')
 projList = document.getElementById('projList')
 projNav.addEventListener('click', function(e){
