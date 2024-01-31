@@ -1,4 +1,4 @@
-project_list = {
+var project_list = {
     0: {
      
         name: "KN - Portal",

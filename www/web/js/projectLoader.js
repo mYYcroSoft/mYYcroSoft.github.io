@@ -1,4 +1,4 @@
-
+/*
 function loadProjects() {
     var projectContainer = document.getElementById("projList");
 
@@ -46,7 +46,7 @@ projNav.addEventListener('click', function(e){
     if(projContainerOpen == false){
 
 
-        loadProjects();
+       // loadProjects();
         projContainer.style.bottom = '0%'
         projContainerOpen = true
     } else {
@@ -115,4 +115,4 @@ function loadProjectsWithTag(id){
 
     }
 
-}
+}*/
