@@ -262,6 +262,13 @@ li{
   margin-left: 10pt;
 }
 
+#page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #252432;
+  display: none;
+}
 @media screen and (max-width: 800px) {
   .welcome_container{
     position: absolute;
@@ -328,5 +335,7 @@ li{
 
  
 }
+
+
 
 

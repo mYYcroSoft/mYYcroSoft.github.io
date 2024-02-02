@@ -1,7 +1,6 @@
-
 import { menuContent } from "../config/menu.js";
 import { pageList } from "../config/page.js";
-
+import * as projectLoader from "./projectLoader.js";
 
 function loadmenuContent(){
 
@@ -23,28 +22,56 @@ function loadmenuContent(){
 
 loadmenuContent()
 
+var OPEN_PAGE_ID = 1;
+var DEFAULT_PAGE_IG = 1;
 function openPage(elementId){
+    var pageContainer = document.getElementById('page')    
     var id = elementId.getAttribute('id-menuContent')
     var menuContentData = menuContent[id];
+  
+    if (id != OPEN_PAGE_ID){
+        if (OPEN_PAGE_ID != id){
 
-    
-    if (menuContentData.page in pageList){
-        console.log(menuContentData.page);
-        openFolderNav(id)
-        var pageData = pageList[menuContentData.page]
+                if (menuContentData.page in pageList){  
+                    console.log(menuContentData.page);
+                    openFolderNav(elementId)
+                    var pageListData = pageList[menuContentData.page]
+                    console.log(pageListData);
+                    if (pageListData.onPageRedir == true) {
 
+                        pageContainer.style.display = 'block';
+                        $('#page').load(pageListData.index);
+                        if (pageListData.index == 'projectlist.html'){
+                            setTimeout(() => {
+                                projectLoader.loadProjects()
+                                console.log("Delayed for 1 second.");
+                              }, "100");
+                        }
+                    }  else {
+                        console.log('[0101] 💥PAGE SYSTEM | Stránka (' + menuContentData.page + ') je nastavena na redirect na jinou stránku, který aktuálně není funkční.')
+                    }
+                } else {
+                    console.log('[0102] 💥PAGE SYSTEM | Stránka (' + menuContentData.page + ') nebyla nalezena v configu')   
+                }
+
+        } else {
+            // Pokud se otevře stejná stránka (OPEN_PAGE_ID == ID)
+            
+
+        }
     } else {
-        console.log('💥PAGE SYSTEM | Stránka (' + menuContentData.page + ') nebyla nalezena v configu')   
+        pageContainer.innerHTML = '';
+        pageContainer.style.display = 'none';
     }
 }
 
     
 
 
-function openFolderNav(id){
-    console.log("START "+ id);
+function openFolderNav(elementId){
+    console.log("START "+ elementId);
     var folders_class = document.getElementsByClassName('navigation_link')
-
+    elementId.classList .add('navigation_link_selected');
     for (var i = 0; i < folders_class.length; i++) {
         folders_class[i].addEventListener('click', function () {
             // Odebrání třídy 'navigation_link_selected' ze všech prvků s třídou 'navigation_link'
@@ -53,8 +80,11 @@ function openFolderNav(id){
             }
     
             // Přidání třídy 'navigation_link_selected' pouze kliknutému elementu
-            this.classList.add('navigation_link_selected');
+           
         });
     }
 }
 
+
+// JS - Load html file into div (jQuery)
+//$('#blogCatalog').load("projectlist.html")

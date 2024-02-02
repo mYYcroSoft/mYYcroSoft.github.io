@@ -1,4 +1,4 @@
-var project_list = {
+export var project_list = {
     0: {
      
         name: "KN - Portal",
@@ -8,7 +8,7 @@ var project_list = {
         main_img: "test.jpg",
         tags: ["Web"]
     },
-    1: {    
+ /*   1: {    
     
         name: "Garage script",
         par: "Kompletní systém ukládání vozidel.",
@@ -92,7 +92,7 @@ var project_list = {
         main_img: "test.jpg",
         tags: ["FiveM"]
     },
-
+*/
     
 
 
