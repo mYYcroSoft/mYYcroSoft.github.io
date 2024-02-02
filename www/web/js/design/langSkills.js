@@ -2,12 +2,12 @@
   
   const skillsMap = {
     HTML: 100,
-    CSS: 88,
-    PHP: 80,
-    JS: 45,
-    PY: 35,
-    C: 10,
-    Node: 35,
+    CSS: 90,
+    PHP: 60,
+    JS: 55,
+    PY: 50,
+    SQL: 55,
+    Node: 40,
     LUA: 100
   };
 

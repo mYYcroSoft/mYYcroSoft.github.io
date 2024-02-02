@@ -33,19 +33,19 @@
 .navigation_link_selected{
     color: #00ffc8;
     animation: selectedLink 2s infinite;
-    transform: rotateY(0deg);
+  
 }
 
 @keyframes selectedLink{
     0%{
         color: #00ffc8;
         text-shadow: #00ffc8 0px 0px 50px;
-        transform: rotateY(0deg);
+   
     }
     100%{
         color: #00ffc818;
         text-shadow: #00ffc818 0px 0px 5px;
-        transform: rotateY(180deg);
+    
     }
 }
 
