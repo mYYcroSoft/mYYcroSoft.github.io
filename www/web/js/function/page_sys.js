@@ -36,16 +36,24 @@ function openPage(elementId){
                     console.log(menuContentData.page);
                     openFolderNav(elementId)
                     var pageListData = pageList[menuContentData.page]
-                    console.log(pageListData);
+                     console.log(pageListData);
                     if (pageListData.onPageRedir == true) {
 
                         pageContainer.style.display = 'block';
+                      
                         $('#page').load(pageListData.index);
                         if (pageListData.index == 'projectlist.html'){
                             setTimeout(() => {
                                 projectLoader.loadProjects()
-                                console.log("Delayed for 1 second.");
-                              }, "100");
+                                pageContainer.animate([
+                                    { opacity: 0 },
+                                    { opacity: 1 },
+                                  ],
+                                  { duration: 300 }); 
+                                  setTimeout(() => {
+                                    pageContainer.style.opacity = 1;
+                                  }, 300);
+                              }, 100);
                         }
                     }  else {
                         console.log('[0101] 💥PAGE SYSTEM | Stránka (' + menuContentData.page + ') je nastavena na redirect na jinou stránku, který aktuálně není funkční.')
@@ -60,8 +68,18 @@ function openPage(elementId){
 
         }
     } else {
-        pageContainer.innerHTML = '';
-        pageContainer.style.display = 'none';
+        pageContainer.animate([
+            { opacity: 1 },
+            { opacity: 0 },
+          ],
+          { duration: 300 }); 
+          setTimeout(() => {
+            pageContainer.innerHTML = '';
+            pageContainer.style.display = 'none';
+            pageContainer.style.opacity = 0;
+          }, 300);
+
+        
     }
 }
 

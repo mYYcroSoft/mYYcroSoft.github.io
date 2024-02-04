@@ -135,8 +135,8 @@
         }
 
         .projectInfoBox{
-            position: absolute;
-            right: -100%;
+            position: fixed;
+            right: 0%;
             width: 30%;
             height: 100%;
             z-index: 6;

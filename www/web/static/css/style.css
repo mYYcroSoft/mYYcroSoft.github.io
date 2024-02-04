@@ -263,11 +263,14 @@ li{
 }
 
 #page {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #252432;
   display: none;
+  opacity: 0;
+  background-color: #252432;
+
+
 }
 @media screen and (max-width: 800px) {
   .welcome_container{

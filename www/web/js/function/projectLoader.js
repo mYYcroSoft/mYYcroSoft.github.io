@@ -1,4 +1,5 @@
 import { project_list } from "../config/projectList.js";
+
 export function loadProjects() {
     var projectContainer = document.getElementById("projList");
 
@@ -7,7 +8,7 @@ export function loadProjects() {
         console.log(projectData)
         $('#projList').append(
             `
-        <div class="projectBox" data-id=${proj} id="proj" onclick="openProjectInfo(this)">
+        <div class="projectBox" data-id=${proj} id="proj" onclick="">
         <div class="projectImg">
         <div class="projctShadow">
             <h3 class="projecTitle">
@@ -22,8 +23,8 @@ export function loadProjects() {
       
         </div>
             `
+         
         )
-    
         
 
     }
@@ -31,7 +32,11 @@ export function loadProjects() {
 
 
 
-
+$('#projList').on("click", '.projectBox', function() {
+    // Get the data-id attribute value
+    var elementId = $(this)
+    console.log(elementId);
+});
 
 
 
@@ -70,4 +75,30 @@ function loadProjectsWithTag(id){
 
     }
 
+}
+
+
+var projectBoxStatus = false
+var projectLastId = 0
+var projBox = document.getElementById('projectInfoBox')
+function openProjectInfo(elementId){
+ 
+/*if(projectBoxStatus == false){
+    projBox.style.right = '0%'
+    projectBoxStatus = true
+ } else {
+    projBox.style.right = '-100%'
+    projectBoxStatus = false
+ }*/
+ 
+ console.log( elementId.target);
+var infotitle = document.getElementById('infoBoxTitle')
+var infotext = document.getElementById('InfoBoxText')
+    const dataObjectId = getAttribute("data-id")
+    const dataObjectData  = project_list[dataObjectId]
+    infotitle.innerText = dataObjectData.name
+    infotext.innerText = dataObjectData.text
+     
+
+    
 }
