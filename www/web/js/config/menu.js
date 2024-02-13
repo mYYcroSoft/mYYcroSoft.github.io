@@ -10,7 +10,7 @@ export var menuContent = {
         name: 'Projects',
         icon: '<i class="fa-solid fa-folder navigation_link"></i>',
         alt: 'Projekty',
-        page: 'projecList_',
+        page: 'projecList',
     },
     3:{ 
         name: 'About',
