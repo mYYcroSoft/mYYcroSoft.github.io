@@ -1,0 +1,98 @@
+@mixin flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+@mixin dot-background {
+    background-color: $secondary-color;
+    background-image: 
+    radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%), 
+    radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%);
+    background-size: 1em 1em;
+    background-position: 50% 50%;
+}
+
+@mixin main-heading-container {
+    .heading {
+        h3 {
+            font-size: $font-h3;
+            gap: $gap;
+            margin-block: $padding-min;
+        }
+        .retype-row{
+            display: inline-flex;
+            gap: $gap;
+            .retype {
+                color: $primary-color;
+            }
+        }
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+        @media (max-width: $mobile) {
+            width: 80vh;
+        }
+
+    }
+}
+
+@mixin main-social-container {
+    .socials{
+        display: inline-flex;
+        gap: calc($gap * 2);
+        font-size: calc($font-span * 1.2);            
+        a {
+            color: $ligt-gray;
+        }
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+    }
+}
+
+@mixin main-skills-container {
+    .skills {
+        padding-top: $padding-max;
+        @include main-skills-list;
+        @media (max-width: $mobile) {
+           display: flex;
+           justify-content: center;
+        }
+        
+    }
+}
+
+@mixin main-skills-list {
+        .list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: $gap;
+            .box {
+                position: relative;
+                width: $small-box;
+                height: $small-box;
+                text-align: center;
+                border-radius: $radius-small;
+                background-color: transparentize($primary-color, 0.5);
+                &:nth-child(3), &:nth-child(5), &:nth-child(8) {
+                    background-color: transparentize($dark-gray, 0.7);
+                }
+                span {
+                    line-height: $small-box;
+                }
+                transition: all 0.3s;
+                &:hover {
+                    transition: all 0.3s;
+                    background-color: $primary-color;
+                    transform: rotate(50deg) scale(1.2);
+                    z-index: 5;
+                    span {
+                        color: $white;
+                    }
+                }
+            }             
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+}
