@@ -29,6 +29,7 @@
             gap: $gap;
             .retype {
                 color: $primary-color;
+                height: 5vh;
             }
         }
         @media (max-width: $tablet) {
@@ -36,6 +37,11 @@
         }
         @media (max-width: $mobile) {
             width: 15rem;
+            .retype-row{
+                .retype {
+                    font-size: calc($font-h3 / 2);
+                }
+            }
         }
 
     }
