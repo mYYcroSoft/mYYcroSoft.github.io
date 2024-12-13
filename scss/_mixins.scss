@@ -10,6 +10,11 @@
     radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%);
     background-size: 1em 1em;
     background-position: 50% 50%;
+ 
+    background-attachment: fixed;
+
+
+
 }
 
 @mixin main-heading-container {
@@ -30,7 +35,7 @@
             text-align: center;
         }
         @media (max-width: $mobile) {
-            width: 80vh;
+            width: 15rem;
         }
 
     }
@@ -56,7 +61,30 @@
         @include main-skills-list;
         @media (max-width: $mobile) {
            display: flex;
-           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+        }
+
+        .skill-bar{
+            width: 100%;
+            background-color: $secondary-color;
+            span { font-size: $font-span;  color: $primary-color;}
+            border-radius: $radius-small;
+            padding: $padding-min;
+            .bar {
+                position: relative;
+                width: 100%;
+                height: 1rem;
+                background-color: $dark-gray;
+                border-radius: $radius-large;
+                .progress {
+                    width: 55%;
+                    height: 1rem;
+                    background-color: $primary-color;
+                    transition: width 1s;
+                    border-radius: $radius-large;
+                }
+            }
         }
         
     }
@@ -67,6 +95,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: $gap;
+            margin-bottom: calc($padding-min * 2);
             .box {
                 position: relative;
                 width: $small-box;
