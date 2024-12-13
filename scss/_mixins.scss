@@ -1,6 +1,6 @@
-@mixin flex-container {
+@mixin flex-container($height: auto) {
     display: flex;
-    height: 100vh;
+    height: $height;
 }
 
 @mixin dot-background {
@@ -59,34 +59,40 @@
     .skills {
         padding-top: $padding-max;
         @include main-skills-list;
+        @include main-skalls-bar;
         @media (max-width: $mobile) {
            display: flex;
            flex-direction: column;
            align-items: center;
         }
+        
+    }
+}
 
-        .skill-bar{
+@mixin main-skalls-bar {
+    .skill-bar{
+        width: auto;
+        background-color: $secondary-color;
+        span { font-size: $font-span;  color: $primary-color;}
+        border-radius: $radius-small;
+        padding: $padding-min;
+        .bar {
+            position: relative;
             width: 100%;
-            background-color: $secondary-color;
-            span { font-size: $font-span;  color: $primary-color;}
-            border-radius: $radius-small;
-            padding: $padding-min;
-            .bar {
-                position: relative;
-                width: 100%;
+            height: 1rem;
+            background-color: $dark-gray;
+            border-radius: $radius-large;
+            .progress {
+                width: 55%;
                 height: 1rem;
-                background-color: $dark-gray;
+                background-color: $primary-color;
+                transition: width 1s;
                 border-radius: $radius-large;
-                .progress {
-                    width: 55%;
-                    height: 1rem;
-                    background-color: $primary-color;
-                    transition: width 1s;
-                    border-radius: $radius-large;
-                }
             }
         }
-        
+        @media (max-width: $mobile) {
+            width:  100%;
+         }
     }
 }
 
