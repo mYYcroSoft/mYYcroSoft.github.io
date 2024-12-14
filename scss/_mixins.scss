@@ -10,11 +10,7 @@
     radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%);
     background-size: 1em 1em;
     background-position: 50% 50%;
- 
     background-attachment: fixed;
-
-
-
 }
 
 @mixin main-heading-container {
@@ -44,6 +40,21 @@
             }
         }
 
+    }
+}
+
+@mixin badges-list {
+    .badges-list{
+        display: flex;
+        gap: $gap;
+        margin-top: $padding-min;
+        .badge {
+            background-color: transparentize($primary-color, 0.5);
+            color: $white;
+            padding: calc($padding-min / 3);
+            border-radius: $radius-small;
+            font-size: calc($font-span / 1.8);
+        }
     }
 }
 

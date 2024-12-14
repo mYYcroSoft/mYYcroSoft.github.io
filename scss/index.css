@@ -219,19 +219,125 @@
 }
 
 .about-container {
-  display: flex;
-  height: 100vh;
+  background-color: rgb(34, 34, 46);
   background-color: rgb(34, 34, 46);
   background-image: radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%), radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 5%);
   background-size: 1em 1em;
   background-position: 50% 50%;
   background-attachment: fixed;
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+}
+.about-container .timeline {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.about-container .block {
-  width: 80%;
-  background-color: #242431;
+.about-container .timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: rgb(56, 178, 172);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.about-container .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.about-container .right {
+  left: 28.3%;
+}
+.about-container .left {
+  left: -28.3%;
+}
+.about-container .container::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: -5px;
+  background-color: rgb(56, 178, 172);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.about-container .right::after {
+  left: -8.5px;
+}
+.about-container .content {
+  padding: 1rem;
+  background-color: rgba(47, 47, 64, 0.5);
+  position: relative;
+  border-radius: 5px;
+}
+.about-container .content .head {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  left: 0;
+  width: 100%;
+}
+.about-container .content .head h2 {
+  color: rgb(56, 178, 172);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.about-container .content .head .badges-list {
+  margin-top: 0;
+}
+.about-container .content .badges-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.about-container .content .badges-list .badge {
+  background-color: rgba(56, 178, 172, 0.5);
+  color: #fff;
+  padding: 0.3333333333rem;
+  border-radius: 5px;
+  font-size: 0.8333333333rem;
+}
+.about-container .content p {
+  color: #acadaf;
+  font-size: 0.9375rem;
+}
+@media screen and (max-width: 600px) {
+  .about-container {
+    /* Place the timelime to the left */
+    /* Full-width containers */
+    /* Make sure that all arrows are pointing leftwards */
+    /* Make sure all circles are at the same spot */
+    /* Make all right containers behave like the left ones */
+  }
+  .about-container .timeline::after {
+    left: 31px;
+  }
+  .about-container .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .about-container .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .about-container .left::after, .about-container .right::after {
+    left: 15px;
+  }
+  .about-container .right {
+    left: 0%;
+  }
 }
 
 body {
