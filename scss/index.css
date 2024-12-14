@@ -310,19 +310,15 @@
   color: #acadaf;
   font-size: 0.9375rem;
 }
-@media screen and (max-width: 600px) {
-  .about-container {
-    /* Place the timelime to the left */
-    /* Full-width containers */
-    /* Make sure that all arrows are pointing leftwards */
-    /* Make sure all circles are at the same spot */
-    /* Make all right containers behave like the left ones */
+@media (max-width: 768px) {
+  .about-container .head {
+    gap: 1rem;
   }
   .about-container .timeline::after {
     left: 31px;
   }
   .about-container .container {
-    width: 100%;
+    width: 75%;
     padding-left: 70px;
     padding-right: 25px;
   }
@@ -333,10 +329,17 @@
     border-color: transparent white transparent transparent;
   }
   .about-container .left::after, .about-container .right::after {
-    left: 15px;
+    left: 22px;
   }
   .about-container .right {
     left: 0%;
+  }
+  .about-container .left {
+    left: 0%;
+  }
+  .about-container .badges-list {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
