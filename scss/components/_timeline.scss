@@ -1,0 +1,123 @@
+@mixin time-line {
+    .timeline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          width: 3px;
+          background-color: $primary-color;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          margin-left: -3px;
+        }
+      }
+    
+      .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          right: -5px;
+          background-color: $primary-color;
+          top: 15px;
+          border-radius: 50%;
+          z-index: 1;
+        }
+      }
+    
+      .container.right {
+        left: 28.3%;
+    
+        &::after {
+          left: -8.5px;
+        }
+      }
+    
+      .container.left {
+        left: -28.3%;
+      }
+    
+      .content {
+        padding: $padding-min;
+        background-color: transparentize(#2F2F40, 0.5);
+        position: relative;
+        border-radius: $radius-small;
+      }
+    
+      .content .head {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        left: 0;
+        width: 100%;
+      }
+    
+      .content .head h2 {
+        color: $primary-color;
+        font-size: $font-span;
+        margin: 0;
+      }
+    
+      .content .head .badges-list {
+        margin-top: 0;
+      }
+    
+      @include badges-list;
+    
+      .content p {
+        color: $ligt-gray;
+        font-size: calc($font-span / 1.6);
+      }
+    
+      @media (max-width: $tablet) {
+        .timeline::after {
+          left: 31px;
+        }
+    
+        .container {
+          width: 75%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+    
+        .container::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }
+    
+        .container.left::after,
+        .container.right::after {
+          left: 22px;
+        }
+    
+        .container.right,
+        .container.left {
+          left: 0%;
+        }
+    
+        .badges-list {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+    
+        .head {
+          gap: $gap;
+        }
+      }
+}

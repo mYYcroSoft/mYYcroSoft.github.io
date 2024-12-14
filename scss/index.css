@@ -225,7 +225,6 @@
   background-size: 1em 1em;
   background-position: 50% 50%;
   background-attachment: fixed;
-  /* Media queries - Responsive timeline on screens less than 600px wide */
 }
 .about-container .timeline {
   display: flex;
@@ -252,12 +251,6 @@
   background-color: inherit;
   width: 50%;
 }
-.about-container .right {
-  left: 28.3%;
-}
-.about-container .left {
-  left: -28.3%;
-}
 .about-container .container::after {
   content: "";
   position: absolute;
@@ -269,8 +262,14 @@
   border-radius: 50%;
   z-index: 1;
 }
-.about-container .right::after {
+.about-container .container.right {
+  left: 28.3%;
+}
+.about-container .container.right::after {
   left: -8.5px;
+}
+.about-container .container.left {
+  left: -28.3%;
 }
 .about-container .content {
   padding: 1rem;
@@ -288,18 +287,17 @@
 .about-container .content .head h2 {
   color: rgb(56, 178, 172);
   font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 .about-container .content .head .badges-list {
   margin-top: 0;
 }
-.about-container .content .badges-list {
+.about-container .badges-list {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
-.about-container .content .badges-list .badge {
+.about-container .badges-list .badge {
   background-color: rgba(56, 178, 172, 0.5);
   color: #fff;
   padding: 0.3333333333rem;
@@ -311,9 +309,6 @@
   font-size: 0.9375rem;
 }
 @media (max-width: 768px) {
-  .about-container .head {
-    gap: 1rem;
-  }
   .about-container .timeline::after {
     left: 31px;
   }
@@ -328,18 +323,20 @@
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-  .about-container .left::after, .about-container .right::after {
+  .about-container .container.left::after,
+  .about-container .container.right::after {
     left: 22px;
   }
-  .about-container .right {
-    left: 0%;
-  }
-  .about-container .left {
+  .about-container .container.right,
+  .about-container .container.left {
     left: 0%;
   }
   .about-container .badges-list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .about-container .head {
+    gap: 1rem;
   }
 }
 
